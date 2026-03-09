@@ -1,0 +1,40 @@
+@model Kitap
+
+<div class="container mt-5">
+    <div class="card shadow border-0">
+        <div class="card-header bg-primary text-white"><h4>Yeni Kitap Ekle</h4></div>
+        <div class="card-body">
+            <form asp-action="Ekle" method="post">
+                <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Kitap Adı</label>
+                    <input asp-for="Ad" class="form-control" placeholder="Kitabın adını giriniz" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Yazar</label>
+                    <input asp-for="Yazar" class="form-control" placeholder="Yazarın adını giriniz" />
+                </div>
+
+                  <div class="mb-3">
+                    <label class="form-label fw-bold">Yayınevi</label>
+                    <input asp-for="YayınEvi" class="form-control" placeholder="Yayınevinin adını giriniz" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Kategori</label>
+                    <select asp-for="KategoriId" class="form-select" 
+                            asp-items="@(new SelectList(ViewBag.Kategoriler, "Id", "Ad"))">
+                        <option value="">-- Kategori Seçin --</option>
+                    </select>
+                </div>
+
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-success px-4">Kaydet</button>
+                    <a asp-action="Index" class="btn btn-secondary px-4">Vazgeç</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

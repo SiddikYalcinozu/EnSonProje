@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Kütüphaneye Hoş Geldiniz";
+}
+
+<div class="container text-center mt-5">
+
+    <!-- Başlık -->
+    <h1 class="display-4 fw-bold">Kütüphanemize Hoş Geldiniz!</h1>
+    
+    <!-- Açıklama -->
+    <p class="lead text-muted mt-3 mb-5">
+        Kitapları keşfedin, favorilerinizi yönetin ve bilgi dünyasında kaybolun.
+    </p>
+
+    <!-- Hızlı Erişim Butonları -->
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a asp-controller="Kitap" asp-action="Index" class="btn btn-primary btn-lg">Kitapları Görüntüle</a>
+        <a asp-controller="Kitap" asp-action="Ekle" class="btn btn-success btn-lg">Yeni Kitap Ekle</a>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center mt-5 py-4 bg-light">
+    <small class="text-muted">© 2026 Kütüphanem. Tüm hakları saklıdır.</small>
+</footer>

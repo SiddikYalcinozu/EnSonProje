@@ -1,0 +1,31 @@
+@model Kategori
+
+<div class="container mt-4">
+
+<h2>Kategori Güncelle</h2>
+
+<form asp-action="Güncelle" method="post">
+
+<input type="hidden" asp-for="Id"/>
+
+<div class="mb-3">
+
+<label class="form-label">
+Kategori Adı
+</label>
+
+<input asp-for="Ad" class="form-control"/>
+
+</div>
+
+<button type="submit" class="btn btn-primary">
+Güncelle
+</button>
+
+<a asp-action="Index" class="btn btn-secondary">
+Geri
+</a>
+
+</form>
+
+</div>

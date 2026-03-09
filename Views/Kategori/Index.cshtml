@@ -1,0 +1,52 @@
+﻿@model List<Kategori>
+
+<div class="container mt-4">
+
+<h2>Kategoriler</h2>
+
+<a asp-action="Ekle" class="btn btn-primary mb-3">
+Yeni Kategori
+</a>
+
+<table class="table table-bordered table-striped">
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Kategori Adı</th>
+<th>İşlemler</th>
+</tr>
+</thead>
+
+<tbody>
+
+@foreach(var kategori in Model)
+{
+<tr>
+
+<td>@kategori.Id</td>
+
+<td>@kategori.Ad</td>
+
+<td>
+
+<a asp-action="Güncelle" asp-route-id="@kategori.Id"
+class="btn btn-warning btn-sm">
+Güncelle
+</a>
+
+<a asp-action="Sil" asp-route-id="@kategori.Id"
+class="btn btn-danger btn-sm">
+Sil
+</a>
+
+</td>
+
+</tr>
+}
+
+</tbody>
+
+</table>
+
+</div>

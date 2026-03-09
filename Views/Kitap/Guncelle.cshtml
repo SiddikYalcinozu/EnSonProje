@@ -1,0 +1,28 @@
+@model Kitap
+
+<div class="container mt-4">
+    <div class="card shadow">
+        <div class="card-header bg-warning text-dark"><h4>Kitap Düzenle</h4></div>
+        <div class="card-body">
+            <form asp-action="Guncelle" method="post">
+                <input type="hidden" asp-for="Id" />
+                <div class="mb-3">
+                    <label class="form-label">Kitap Adı</label>
+                    <input asp-for="Ad" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Yazar</label>
+                    <input asp-for="Yazar" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Kategori</label>
+                    <select asp-for="KategoriId" class="form-select" 
+                            asp-items="@(new SelectList(ViewBag.Kategoriler, "Id", "Ad"))">
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-warning">Değişiklikleri Kaydet</button>
+                <a asp-action="Index" class="btn btn-secondary">Vazgeç</a>
+            </form>
+        </div>
+    </div>
+</div>
