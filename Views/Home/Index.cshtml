@@ -1,26 +1,95 @@
 ﻿@{
-    ViewData["Title"] = "Kütüphaneye Hoş Geldiniz";
+    ViewData["Title"] = "Kütüphane Yönetim Paneli";
 }
 
-<div class="container text-center mt-5">
-
-    <!-- Başlık -->
-    <h1 class="display-4 fw-bold">Kütüphanemize Hoş Geldiniz!</h1>
-    
-    <!-- Açıklama -->
-    <p class="lead text-muted mt-3 mb-5">
-        Kitapları keşfedin, favorilerinizi yönetin ve bilgi dünyasında kaybolun.
-    </p>
-
-    <!-- Hızlı Erişim Butonları -->
-    <div class="d-flex justify-content-center gap-3 flex-wrap">
-        <a asp-controller="Kitap" asp-action="Index" class="btn btn-primary btn-lg">Kitapları Görüntüle</a>
-        <a asp-controller="Kitap" asp-action="Ekle" class="btn btn-success btn-lg">Yeni Kitap Ekle</a>
+<div class="container mt-5">
+    <div class="row text-center mb-5">
+        <div class="col-12">
+            <h1 class="display-4 fw-bold text-dark">📚 Kontrol Paneli</h1>
+            <p class="lead text-muted">Kütüphanemize Hoşgeldiniz!</p>
+        </div>
     </div>
 
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow border-0 hover-zoom">
+                <div class="card-body p-4 text-center">
+                    <div class="display-3 mb-3">🔄</div> 
+                    <h4 class="fw-bold">Emanet İşlemleri</h4>
+                    <p class="text-muted small">Kitap al-ver işlerini buradan hallet.</p>
+                    <div class="d-grid gap-2">
+                        <a href="/Emanet" class="btn btn-primary rounded-pill">
+                            📋 Hareket Listesi
+                        </a>
+                        <a href="/Emanet/Ver" class="btn btn-outline-primary rounded-pill">
+                            🤝 Kitap Emanet Ver
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow border-0 hover-zoom">
+                <div class="card-body p-4 text-center">
+                    <div class="display-3 mb-3">👨‍🎓</div>
+                    <h4 class="fw-bold">Öğrenci İşleri</h4>
+                    <p class="text-muted small">Öğrenci ekle, çıkar veya bilgilerini güncelle.</p>
+                    <div class="d-grid">
+                        <a href="/Ogrenci" class="btn btn-success rounded-pill">
+                            👥 Öğrenci Listesine Git
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow border-0 hover-zoom">
+                <div class="card-body p-4 text-center">
+                    <div class="display-3 mb-3">📖</div>
+                    <h4 class="fw-bold">Kitap Envanteri</h4>
+                    <p class="text-muted small">Raftaki kitapları yönet ve yeni kitaplar ekle.</p>
+                    <div class="d-grid">
+                        <a href="/Kitap" class="btn btn-dark rounded-pill">
+                            📚 Kitaplığa Göz At
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow border-0 hover-zoom">
+                <div class="card-body p-4 text-center">
+                    <div class="display-3 mb-3">🌐</div>
+                    <h4 class="fw-bold">API Erişimi</h4>
+                    <p class="text-muted small">Swagger ekranından endpoint'leri görüntüle ve test et.</p>
+                    <div class="d-grid gap-2">
+                        <a href="/swagger" class="btn btn-warning rounded-pill">
+                            Swagger Aç
+                        </a>
+                        <a href="/api/homeapi" class="btn btn-outline-secondary rounded-pill">
+                            API Durumunu Kontrol Et
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<!-- Footer -->
-<footer class="text-center mt-5 py-4 bg-light">
-    <small class="text-muted">© 2026 Kütüphanem. Tüm hakları saklıdır.</small>
-</footer>
+<style>
+    /* Kartların üzerine gelince hafif büyüme efekti */
+    .hover-zoom {
+        transition: all 0.3s ease-in-out;
+    }
+    .hover-zoom:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+    }
+    /* Butonları daha yumuşak (oval) yapmak için */
+    .rounded-pill {
+        border-radius: 50px;
+    }
+</style>

@@ -1,0 +1,54 @@
+@model Sinif
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card shadow-lg border-0 hover-zoom">
+                <div class="card-header bg-success text-white py-3 text-center">
+                    <h5 class="mb-0 fw-bold">🏫 Yeni Sınıf Tanımla</h5>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Ekle" method="post" id="sinifForm">
+                        <div class="text-center display-4 mb-3">🏷️</div>
+                        
+                        <div class="mb-4 text-start">
+                            <label asp-for="Ad" class="form-label fw-bold small text-uppercase text-muted">Sınıf Adı</label>
+                            <input asp-for="Ad" class="form-control form-control-lg border-2 shadow-sm" 
+                                   placeholder="Örn: 10-A, 11-B" required autofocus />
+                            <span asp-validation-for="Ad" class="text-danger small"></span>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success btn-lg rounded-pill shadow" 
+                                    id="submitBtn"
+                                    onclick="if(this.form.checkValidity()) { this.disabled=true; this.innerHTML='⌛ Kaydediliyor...'; this.form.submit(); }">
+                                Sınıfı Kaydet
+                            </button>
+                            
+                            <a asp-action="Index" class="btn btn-light btn-sm rounded-pill border text-secondary mt-2">
+                                Listeye Geri Dön
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .hover-zoom {
+        transition: transform 0.3s ease;
+    }
+    .hover-zoom:hover {
+        transform: translateY(-5px);
+    }
+    .form-control:focus {
+        border-color: #198754;
+        box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+    }
+</style>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

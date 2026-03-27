@@ -208,3 +208,11 @@
 /home/siddik180/Belgeler/EnSonProje/bin/Debug/net9.0/runtimes/win-x64/native/e_sqlite3.dll
 /home/siddik180/Belgeler/EnSonProje/bin/Debug/net9.0/runtimes/win-x86/native/e_sqlite3.dll
 /home/siddik180/Belgeler/EnSonProje/obj/Debug/net9.0/EnSonProje.csproj.Up2Date
+/home/siddik180/Belgeler/EnSonProje/obj/Debug/net9.0/EnSonProje.sourcelink.json
+/home/siddik180/Belgeler/EnSonProje/obj/Debug/net9.0/EnSonProje.MvcApplicationPartsAssemblyInfo.cs
+/home/siddik180/Belgeler/EnSonProje/bin/Debug/net9.0/Microsoft.OpenApi.dll
+/home/siddik180/Belgeler/EnSonProje/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/siddik180/Belgeler/EnSonProje/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/siddik180/Belgeler/EnSonProje/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/siddik180/Belgeler/EnSonProje/bin/Debug/net9.0/EnSonProje.xml
+/home/siddik180/Belgeler/EnSonProje/obj/Debug/net9.0/EnSonProje.xml

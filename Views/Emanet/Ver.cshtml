@@ -1,0 +1,40 @@
+@model EnSonProje.Models.Emanet
+
+<div class="container mt-5 text-start">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card shadow border-0">
+                <div class="card-header bg-primary text-white py-3">
+                    <h5 class="mb-0 fw-bold"><i class="bi bi-book-half me-2"></i>Kitap Emanet Ver</h5>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Ver" method="post">
+                        
+                        <div class="mb-3">
+                            <label class="form-label fw-bold small">ÖĞRENCİ SEÇİN</label>
+                            <select asp-for="OgrenciId" class="form-select border-2" asp-items="ViewBag.OgrenciListesi" required>
+                                <option value="">-- Listeden Seçin --</option>
+                            </select>
+                            <span asp-validation-for="OgrenciId" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold small">KİTAP SEÇİN</label>
+                            <select asp-for="KitapId" class="form-select border-2" asp-items="ViewBag.KitapListesi" required>
+                                <option value="">-- Listeden Seçin --</option>
+                            </select>
+                            <span asp-validation-for="KitapId" class="text-danger small"></span>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success btn-lg shadow-sm">
+                                <i class="bi bi-send-check me-1"></i> Emanet İşlemini Yap
+                            </button>
+                            <a asp-action="Index" class="btn btn-light border btn-sm text-secondary">Vazgeç</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

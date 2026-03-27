@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EnSonProje</name>
+    </assembly>
+    <members>
+        <member name="M:EnSonProje.Controllers.Api.EmanetApiController.GetAll">
+            <summary>
+            Tum emanet kayitlarini listeler.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.EmanetApiController.GetById(System.Int32)">
+            <summary>
+            Id'ye gore emanet kaydi getirir.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.EmanetApiController.Create(EnSonProje.Contracts.EmanetCreateRequest)">
+            <summary>
+            Yeni emanet kaydi olusturur.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.EmanetApiController.TeslimAl(System.Int32)">
+            <summary>
+            Emanet kaydini teslim alindi olarak isaretler.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.EmanetApiController.Delete(System.Int32)">
+            <summary>
+            Emanet kaydini siler.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.HomeApiController.Index">
+            <summary>
+            API durum bilgisini ve temel endpoint adreslerini dondurur.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.KategoriApiController.GetAll">
+            <summary>
+            Tum kategorileri listeler.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.KategoriApiController.GetById(System.Int32)">
+            <summary>
+            Id'ye gore kategori getirir.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.KategoriApiController.Create(EnSonProje.Contracts.KategoriUpsertRequest)">
+            <summary>
+            Yeni kategori ekler.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.KategoriApiController.Update(System.Int32,EnSonProje.Contracts.KategoriUpsertRequest)">
+            <summary>
+            Mevcut kategori bilgilerini gunceller.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.KategoriApiController.Delete(System.Int32)">
+            <summary>
+            Kategori kaydini siler.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.KitapApiController.GetAll">
+            <summary>
+            Tum kitaplari kategori bilgisiyle birlikte listeler.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.KitapApiController.GetById(System.Int32)">
+            <summary>
+            Id'ye gore kitap getirir.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.KitapApiController.Create(EnSonProje.Contracts.KitapUpsertRequest)">
+            <summary>
+            Yeni kitap ekler.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.KitapApiController.Update(System.Int32,EnSonProje.Contracts.KitapUpsertRequest)">
+            <summary>
+            Kitap bilgisini gunceller.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.KitapApiController.Delete(System.Int32)">
+            <summary>
+            Kitap kaydini siler.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.OgrenciApiController.GetAll">
+            <summary>
+            Tum ogrencileri sinif bilgisiyle birlikte listeler.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.OgrenciApiController.GetById(System.Int32)">
+            <summary>
+            Id'ye gore ogrenci getirir.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.OgrenciApiController.Create(EnSonProje.Contracts.OgrenciUpsertRequest)">
+            <summary>
+            Yeni ogrenci ekler.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.OgrenciApiController.Update(System.Int32,EnSonProje.Contracts.OgrenciUpsertRequest)">
+            <summary>
+            Ogrenci bilgisini gunceller.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.OgrenciApiController.Delete(System.Int32)">
+            <summary>
+            Ogrenci kaydini siler.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.SinifApiController.GetAll">
+            <summary>
+            Tum siniflari listeler.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.SinifApiController.GetById(System.Int32)">
+            <summary>
+            Id'ye gore sinif getirir.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.SinifApiController.Create(EnSonProje.Contracts.SinifUpsertRequest)">
+            <summary>
+            Yeni sinif ekler.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.SinifApiController.Update(System.Int32,EnSonProje.Contracts.SinifUpsertRequest)">
+            <summary>
+            Sinif bilgisini gunceller.
+            </summary>
+        </member>
+        <member name="M:EnSonProje.Controllers.Api.SinifApiController.Delete(System.Int32)">
+            <summary>
+            Sinif kaydini siler.
+            </summary>
+        </member>
+        <member name="T:EnSonProje.Migrations.KategoriEkleme">
+            <inheritdoc />
+        </member>
+        <member name="M:EnSonProje.Migrations.KategoriEkleme.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnSonProje.Migrations.KategoriEkleme.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnSonProje.Migrations.KategoriEkleme.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:EnSonProje.Migrations.KitapModeliGuncelleme">
+            <inheritdoc />
+        </member>
+        <member name="M:EnSonProje.Migrations.KitapModeliGuncelleme.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnSonProje.Migrations.KitapModeliGuncelleme.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnSonProje.Migrations.KitapModeliGuncelleme.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:EnSonProje.Migrations.SinifTablosuEklendi">
+            <inheritdoc />
+        </member>
+        <member name="M:EnSonProje.Migrations.SinifTablosuEklendi.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnSonProje.Migrations.SinifTablosuEklendi.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnSonProje.Migrations.SinifTablosuEklendi.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:EnSonProje.Migrations.OgrenciTablosuEkle">
+            <inheritdoc />
+        </member>
+        <member name="M:EnSonProje.Migrations.OgrenciTablosuEkle.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnSonProje.Migrations.OgrenciTablosuEkle.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnSonProje.Migrations.OgrenciTablosuEkle.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:EnSonProje.Migrations.EmanetTablosuEkle">
+            <inheritdoc />
+        </member>
+        <member name="M:EnSonProje.Migrations.EmanetTablosuEkle.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnSonProje.Migrations.EmanetTablosuEkle.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnSonProje.Migrations.EmanetTablosuEkle.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,29 @@
+@model Sinif
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-warning text-dark py-3">
+                    <h5 class="mb-0 fw-bold"><i class="bi bi-pencil-square"></i> Sınıfı Düzenle</h5>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Guncelle" method="post">
+                        <input type="hidden" asp-for="Id" />
+                        
+                        <div class="mb-4">
+                            <label asp-for="Ad" class="form-label fw-bold">Sınıf Adı</label>
+                            <input asp-for="Ad" class="form-control form-control-lg" placeholder="Örn: 12-B" required />
+                            <span asp-validation-for="Ad" class="text-danger small"></span>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg">Değişiklikleri Kaydet</button>
+                            <a asp-action="Index" class="btn btn-light border">İptal Et</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

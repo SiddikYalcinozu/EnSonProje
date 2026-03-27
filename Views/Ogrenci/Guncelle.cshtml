@@ -1,0 +1,58 @@
+@model Ogrenci
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow border-0">
+                <div class="card-header bg-warning text-dark py-3">
+                    <h5 class="mb-0 fw-bold">
+                        <i class="bi bi-pencil-square me-2"></i>Öğrenci Bilgilerini Düzenle
+                    </h5>
+                </div>
+                <div class="card-body p-4 text-start">
+                    <form asp-action="Guncelle" method="post">
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="mb-3">
+                            <label asp-for="OkulNo" class="form-label fw-bold small text-uppercase">Okul Numarası</label>
+                            <input asp-for="OkulNo" class="form-control" placeholder="Örn: 423" required />
+                            <span asp-validation-for="OkulNo" class="text-danger small"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Ad" class="form-label fw-bold small text-uppercase">Adı</label>
+                                <input asp-for="Ad" class="form-control" required />
+                                <span asp-validation-for="Ad" class="text-danger small"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Soyad" class="form-label fw-bold small text-uppercase">Soyadı</label>
+                                <input asp-for="Soyad" class="form-control" required />
+                                <span asp-validation-for="Soyad" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="SinifId" class="form-label fw-bold small text-uppercase">Sınıfı Değiştir</label>
+                            <select asp-for="SinifId" class="form-select" asp-items="ViewBag.SinifListesi">
+                                <option value="">-- Sınıf Seçin --</option>
+                            </select>
+                            <span asp-validation-for="SinifId" class="text-danger small"></span>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg shadow-sm">
+                                <i class="bi bi-check-circle me-1"></i> Değişiklikleri Uygula
+                            </button>
+                            <a asp-action="Index" class="btn btn-light border btn-sm text-secondary">Vazgeç (İptal)</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

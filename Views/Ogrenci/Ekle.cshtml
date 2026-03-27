@@ -1,0 +1,47 @@
+@model Ogrenci
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-success text-white py-3">
+                    <h5 class="mb-0 fw-bold"><i class="bi bi-person-plus-fill me-2"></i>Yeni Öğrenci Kaydı</h5>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Ekle" method="post">
+                        <div class="mb-3">
+                            <label asp-for="OkulNo" class="form-label fw-bold small text-uppercase">Okul Numarası</label>
+                            <input asp-for="OkulNo" class="form-control border-2" placeholder="Örn: 105" required />
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Ad" class="form-label fw-bold small text-uppercase">Adı</label>
+                                <input asp-for="Ad" class="form-control border-2" required />
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Soyad" class="form-label fw-bold small text-uppercase">Soyadı</label>
+                                <input asp-for="Soyad" class="form-control border-2" required />
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="SinifId" class="form-label fw-bold small text-uppercase">Sınıf Seçimi</label>
+                            <select asp-for="SinifId" class="form-select border-2" asp-items="ViewBag.SinifListesi">
+                                <option value="">-- Lütfen Sınıf Seçin --</option>
+                            </select>
+                            <span asp-validation-for="SinifId" class="text-danger small"></span>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success btn-lg shadow-sm">
+                                <i class="bi bi-save me-1"></i> Kaydet ve Listeye Dön
+                            </button>
+                            <a asp-action="Index" class="btn btn-light border btn-sm text-secondary">Vazgeç</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

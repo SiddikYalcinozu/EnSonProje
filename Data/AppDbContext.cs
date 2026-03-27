@@ -12,5 +12,13 @@ namespace EnSonProje.Data
         public DbSet<Kitap> Kitaplar { get; set; }
 
         public DbSet<Kategori> Kategoriler { get; set; }
+
+        public DbSet<Ogrenci> Ogrenciler { get; set; }
+
+        public DbSet<Emanet> Emanetler { get; set; }
+
+      
+public DbSet<Sinif> Siniflar { get; set; }
+        
     }
 }

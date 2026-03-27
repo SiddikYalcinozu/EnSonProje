@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EnSonProje")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0b2b0743737ea7687da8b836e3e17dea251f904")]
 [assembly: System.Reflection.AssemblyProductAttribute("EnSonProje")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EnSonProje")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
